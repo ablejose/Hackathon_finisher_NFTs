@@ -5,11 +5,6 @@ import CollectionRouter from "@/modules/collection/components/Router";
 import { notFound } from 'next/navigation';
 import React, { FC } from "react";
 
-// This function is needed for the static export build process.
-export async function generateStaticParams() {
-  return [];
-}
-
 interface Props {
     params: {
         collection: string;
