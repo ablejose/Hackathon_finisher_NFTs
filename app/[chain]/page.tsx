@@ -1,3 +1,6 @@
+export async function generateStaticParams() {
+  return [];
+}
 import React, { FC } from "react"
 import { getAllApps, getClient } from "@/lib/database/get";
 import { HomePage } from "@/modules/home";
