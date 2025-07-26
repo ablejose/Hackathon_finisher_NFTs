@@ -1,6 +1,5 @@
 # Andromeda Bootcamp Finishers NFT
-
-https://github.com/ablejose/Hackathon_finisher_NFTs/blob/main/Screenshot%202025-07-26%20231642.png
+![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeicyjyimf3ukiw6ww7d4jk3hwxnewlsdh3cthtxgrhkarzuo3srvcq)
 
 
 A Next.js decentralized application built on the Andromeda Protocol for issuing "Proof of Participation" NFTs to bootcamp finishers.
@@ -94,5 +93,3 @@ This README includes:
 7. Deployment information
 8. Learning resources
 9. License information
-
-You can customize the repository link, add badges (like build status), and include screenshots if available. The emojis help with visual scanning but can be removed if preferred.
