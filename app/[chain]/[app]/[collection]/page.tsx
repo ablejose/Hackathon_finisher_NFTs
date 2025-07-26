@@ -1,11 +1,14 @@
+"use client";
+
+import { useGetCollection } from "@/lib/app/hooks/useGetCollection";
+import CollectionRouter from "@/modules/collection/components/Router";
+import { notFound } from 'next/navigation';
+import React, { FC } from "react";
+
+// This function is needed for the static export build process.
 export async function generateStaticParams() {
   return [];
 }
-"use client";
-import { useGetCollection } from "@/lib/app/hooks/useGetCollection";
-import CollectionRouter from "@/modules/collection/components/Router";
-import { notFound } from 'next/navigation'
-import React, { FC } from "react"
 
 interface Props {
     params: {
@@ -25,4 +28,4 @@ const Page: FC<Props> = (props) => {
     )
 }
 
-export default Page
+export default Page;
