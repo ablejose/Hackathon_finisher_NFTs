@@ -1,3 +1,6 @@
+export async function generateStaticParams() {
+  return [];
+}
 "use client";
 import { useGetCollection } from "@/lib/app/hooks/useGetCollection";
 import CollectionRouter from "@/modules/collection/components/Router";
