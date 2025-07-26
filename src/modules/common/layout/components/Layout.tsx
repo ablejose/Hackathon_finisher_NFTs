@@ -52,7 +52,11 @@ const Layout: FC<LayoutProps> = (props) => {
       <Box px="24" py="16" position="relative" zIndex="1">
         {children}
       </Box>
-      <PoweredByLogo position="relative" zIndex="1" />
+      {/* START: THIS IS THE CORRECTED LINE 55 */}
+      <Box position="fixed" bottom="4" right="4" zIndex="10">
+        <PoweredByLogo />
+      </Box>
+      {/* END: THIS IS THE CORRECTED LINE 55 */}
     </Box>
   );
 };
