@@ -23,7 +23,7 @@ export const ThemeStorageManager = createLocalStorageManager("andromeda-marketpl
 export default extendTheme({
   config,
   styles: {
-    global: (props) => ({
+    global: (props: any) => ({
       "*": {
         scrollbarWidth: "6px",
         scrollbarColor: "#9E77ED transparent", // Updated to primary.500
