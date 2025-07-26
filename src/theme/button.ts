@@ -11,23 +11,31 @@ const baseStyle: SystemStyleObject = {
     cursor: "not-allowed",
     boxShadow: "none",
   },
+  transition: "all 0.2s ease",
+  _hover: {
+    transform: "translateY(-1px)",
+    boxShadow: "0 4px 15px -5px var(--chakra-colors-primary-400)",
+  },
+  _active: {
+    transform: "translateY(0)",
+  },
 };
 
 const variantOutline: SystemStyleFunction = (props) => {
   const { colorScheme: c, theme } = props;
 
   return {
-    borderColor: `${c}.300`,
+    borderColor: `${c}.500`,
+    color: `${c}.200`,
     _hover: {
-      bg: `${c}.50`,
+      bg: `${c}.800`,
+      borderColor: `${c}.400`,
     },
     _active: {
-      bg: "white",
+      bg: `${c}.700`,
     },
     _focus: {
-      bg: "white",
-      borderColor: `${c}.300`,
-      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.100`)}`,
+      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.300`)}`,
     },
   };
 };
@@ -36,19 +44,19 @@ const variantSolid: SystemStyleFunction = (props) => {
   const { colorScheme: c, theme } = props;
 
   return {
-    bg: `${c}.600`,
+    bg: `${c}.500`,
     color: "white",
     _hover: {
-      bg: `${c}.700`,
+      bg: `${c}.400`,
       _disabled: {
         bg: `${c}.200`,
       },
     },
     _active: {
-      bg: `${c}.600`,
+      bg: `${c}.500`,
     },
     _focus: {
-      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.100`)}`,
+      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.300`)}`,
     },
   };
 };
@@ -57,19 +65,18 @@ const variantGhost: SystemStyleFunction = (props) => {
   const { colorScheme: c, theme } = props;
 
   return {
-    bg: `${c}.50`,
-    color: `${c}.700`,
+    color: `${c}.200`,
     _hover: {
-      bg: `${c}.100`,
+      bg: `${c}.800`,
       _disabled: {
         bg: `${c}.25`,
       },
     },
     _active: {
-      bg: `${c}.50`,
+      bg: `${c}.700`,
     },
     _focus: {
-      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.100`)}`,
+      boxShadow: `0 0 0 4px ${getColor(theme, `${c}.300`)}`,
     },
   };
 };

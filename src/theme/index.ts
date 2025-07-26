@@ -14,7 +14,7 @@ import Tooltip from "./tooltip";
 import shadows from "./shadows";
 
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark', // Changed to dark mode as default for NFT theme
   useSystemColorMode: false,
 }
 
@@ -23,25 +23,41 @@ export const ThemeStorageManager = createLocalStorageManager("andromeda-marketpl
 export default extendTheme({
   config,
   styles: {
-    global: {
+    global: (props) => ({
       "*": {
         scrollbarWidth: "6px",
-        scrollbarColor: "#7F56D9 transparent",
+        scrollbarColor: "#9E77ED transparent", // Updated to primary.500
       },
-
       "*::-webkit-scrollbar": {
         width: "6px",
       },
-
       "*::-webkit-scrollbar-track": {
         bg: "transparent",
       },
-
       "*::-webkit-scrollbar-thumb": {
-        bg: "#7F56D9",
+        bg: "#9E77ED", // Updated to primary.500
         borderRadius: "1.5rem",
       },
-    },
+      body: {
+        bg: "linear-gradient(180deg, #14001f 0%, #2d004f 100%)",
+        color: "white",
+        minHeight: "100vh",
+        backgroundAttachment: "fixed",
+        "&::before": {
+          content: '""',
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: 
+            "radial-gradient(circle at 10% 20%, rgba(123, 31, 162, 0.15) 0%, transparent 20%)," +
+            "radial-gradient(circle at 90% 80%, rgba(0, 150, 136, 0.15) 0%, transparent 20%)",
+          pointerEvents: "none",
+          zIndex: -1,
+        },
+      },
+    }),
   },
   shadows,
   fonts: {
@@ -52,19 +68,50 @@ export default extendTheme({
   },
   components: {
     Accordion,
-    Button,
-    Heading,
+    Button: {
+      ...Button,
+      baseStyle: {
+        ...Button.baseStyle,
+        fontWeight: "bold",
+        borderRadius: "md",
+        _hover: {
+          transform: "translateY(-1px)",
+          boxShadow: "0 4px 15px -5px var(--chakra-colors-primary-400)",
+        },
+        _active: {
+          transform: "translateY(0)",
+        },
+      },
+    },
+    Heading: {
+      ...Heading,
+      baseStyle: {
+        ...Heading.baseStyle,
+        textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+      },
+    },
     Input,
-    // Menu,
-    Modal,
+    Modal: {
+      ...Modal,
+      baseStyle: {
+        ...Modal.baseStyle,
+        dialog: {
+          bg: "rgba(26, 0, 51, 0.95)",
+          backdropFilter: "blur(10px)",
+          border: "1px solid",
+          borderColor: "primary.700",
+        },
+      },
+    },
     Popover,
     Spinner,
     Tabs,
     Tooltip,
   },
   colors: {
+    // Preserving all existing color scales but adjusting some values for dark mode
     primary: {
-      25: "#FCFAFF ",
+      25: "#FCFAFF",
       50: "#F9F5FF",
       100: "#F4EBFF",
       200: "#E9D7FE",
@@ -141,7 +188,6 @@ export default extendTheme({
       800: "#125D56",
       900: "#134E48",
     },
-    // Color range by type (ado / primitive / module /modifier)
     ado: {
       25: "#F5FBFF",
       50: "#F0F9FF",
@@ -155,7 +201,6 @@ export default extendTheme({
       800: "#065986",
       900: "#0B4A6F",
     },
-    // repeat of ado for defined read data from schema
     baseADO: {
       25: "#F5FBFF",
       50: "#F0F9FF",
@@ -169,7 +214,6 @@ export default extendTheme({
       800: "#065986",
       900: "#0B4A6F",
     },
-    // These are placeholder values for primitives until ones are defined
     primitive: {
       25: "#E4ECFC",
       100: "#D3D9FA",
@@ -196,23 +240,51 @@ export default extendTheme({
       800: "#0040C1",
       900: "#00359E",
     },
-    system: theme.colors.gray
+    system: theme.colors.gray,
+    // Adding new NFT-inspired colors
+    nft: {
+      darkBg: "#14001f",
+      purpleBg: "#2d004f",
+      accent: "#9E77ED",
+      highlight: "#B692F6",
+    }
   },
   textStyles: {
     h1: {
       fontWeight: 700,
-      color: "gray.900",
+      color: "white", // Updated for dark mode
       fontSize: "xl",
       mb: 2,
       letterSpacing: 0.5,
     },
     bold: {
-      color: "gray.700",
+      color: "gray.200", // Updated for dark mode
       fontWeight: 700,
     },
     light: {
-      color: "gray.500",
+      color: "gray.400", // Updated for dark mode
       fontSize: "sm",
+    },
+  },
+  layerStyles: {
+    card: {
+      bg: "rgba(26, 0, 51, 0.7)",
+      border: "1px solid",
+      borderColor: "primary.700",
+      borderRadius: "lg",
+      p: 4,
+      backdropFilter: "blur(10px)",
+      _hover: {
+        borderColor: "primary.500",
+        transform: "translateY(-2px)",
+        boxShadow: "0 4px 20px -5px var(--chakra-colors-primary-500)",
+      },
+    },
+    glass: {
+      bg: "rgba(26, 0, 51, 0.5)",
+      backdropFilter: "blur(10px)",
+      border: "1px solid",
+      borderColor: "primary.800",
     },
   },
 });

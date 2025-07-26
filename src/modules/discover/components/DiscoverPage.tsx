@@ -18,7 +18,18 @@ const DiscoverPage: FC<DiscoverPageProps> = (props) => {
       <Box mt="4">
         <Featured />
       </Box>
-      <Text fontSize="xl" fontWeight="bold" mt="16">
+      <Text 
+        fontSize="xl" 
+        fontWeight="bold" 
+        color="primary.400"
+        textAlign="center"
+        mt="8"
+        mb="4"
+        textShadow="0 0 8px rgba(158, 119, 237, 0.5)"
+      >
+        Perfectly crafted NFTs for the Andromeda Bootcamp Finishers, GRAB YOUR NFTS RIGHT AWAY!!
+      </Text>
+      <Text fontSize="xl" fontWeight="bold" mt="4">
         Explore Collections
       </Text>
       {collections.map((col) => (
