@@ -1,10 +1,10 @@
-# Andromeda Bootcamp Finishers NFT   https://hackathon-finisher-nf-ts-8uwm.vercel.app/
+# Andromeda Bootcamp Finishers NFT  
 ![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeicyjyimf3ukiw6ww7d4jk3hwxnewlsdh3cthtxgrhkarzuo3srvcq)
 
 
 A Next.js decentralized application built on the Andromeda Protocol for issuing "Proof of Participation" NFTs to bootcamp finishers.
 
-## Overview
+## Overview      https://hackathon-finisher-nf-ts-8uwm.vercel.app/
 
 The Andromeda Bootcamp Finishers dApp provides a simple way for event organizers to reward participants with unique, on-chain collectibles. Leveraging Andromeda's low-code ADO framework, we offer a transparent and secure platform for distributing digital memorabilia that fosters community accomplishment.
 
