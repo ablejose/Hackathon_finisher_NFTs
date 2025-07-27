@@ -1,5 +1,5 @@
 # Andromeda Bootcamp Finishers NFT  
-![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeicyjyimf3ukiw6ww7d4jk3hwxnewlsdh3cthtxgrhkarzuo3srvcq)
+![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeidgnhm7nk2n26xumooivv7rxhonrpug7cao5tfinfft6ynsvooehu)
 
 
 A Next.js decentralized application built on the Andromeda Protocol for issuing "Proof of Participation" NFTs to bootcamp finishers.
@@ -18,7 +18,7 @@ The Andromeda Bootcamp Finishers dApp provides a simple way for event organizers
 
 ## Use Cases
 
-![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeih23uuiee3jc64klqkw6szab3jpjiacadus3c6iegkdwm5paiy3hq)
+![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeig2o2psiylewzwyg3xemu4voxv35rzvwmtbaieudpgk6o5qi4i2q4)
 
 ### 1. Bootcamp Rewards
 - Issue digital certificates of completion for technical events
@@ -51,6 +51,8 @@ The Andromeda Bootcamp Finishers dApp provides a simple way for event organizers
 ### Deployment
 - Vercel (Next.js hosting)
 - GitHub Actions (CI/CD pipeline)
+
+![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeic3z4or7sv6wlz2big5qmwholnm2g3svdaauyeoxvkqgpfcgxshxm)
 
 ## Installation
 
