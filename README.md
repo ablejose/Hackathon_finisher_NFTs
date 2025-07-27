@@ -18,6 +18,8 @@ The Andromeda Bootcamp Finishers dApp provides a simple way for event organizers
 
 ## Use Cases
 
+![Andromeda Bootcamp Banner](https://gateway.pinata.cloud/ipfs/bafybeih23uuiee3jc64klqkw6szab3jpjiacadus3c6iegkdwm5paiy3hq)
+
 ### 1. Bootcamp Rewards
 - Issue digital certificates of completion for technical events
 - Participants claim one free NFT (paying only gas fees)
